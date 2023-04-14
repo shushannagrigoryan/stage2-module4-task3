@@ -14,7 +14,9 @@ public class ShopStock {
 
     public List<Product>  executeFilteringStrategy(FilteringStrategy filteringStrategy){
         for (Product item: productList) {
-            filteringStrategy.filter(item);
+            if(filteringStrategy.filter(item)){
+                productList.remove(item);
+            }
         }
 
         return productList;
