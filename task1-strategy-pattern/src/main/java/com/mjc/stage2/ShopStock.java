@@ -12,7 +12,7 @@ public class ShopStock {
 
     // Write your code here!
 
-    List<Product>  executeFilteringStrategy(FilteringStrategy filteringStrategy){
+    public List<Product>  executeFilteringStrategy(FilteringStrategy filteringStrategy){
         for (Product item: productList) {
             filteringStrategy.filter(item);
         }
