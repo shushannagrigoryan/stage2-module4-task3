@@ -13,7 +13,7 @@ public class ManufactureFilteringStrategy implements FilteringStrategy {
 
     // Write your code here!
     public boolean filter(Product product){
-        return product.getManufacture().equals(manufacture);
+        return product.getManufacture().equalsIgnoreCase(manufacture);
     }
 
 }
