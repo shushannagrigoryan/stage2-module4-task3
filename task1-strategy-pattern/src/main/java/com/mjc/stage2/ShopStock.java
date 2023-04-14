@@ -3,6 +3,7 @@ package com.mjc.stage2;
 import java.util.List;
 
 public class ShopStock {
+    private FilteringStrategy filteringStrategy;
     private final List<Product> productList;
 
     public ShopStock(List<Product> productList) {
@@ -10,4 +11,12 @@ public class ShopStock {
     }
 
     // Write your code here!
+
+    List<Product>  executeFilteringStrategy(FilteringStrategy filteringStrategy){
+        for (Product item: productList) {
+            filteringStrategy.filter(item);
+        }
+
+        return productList;
+    }
 }
